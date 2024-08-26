@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Soft-blue: #8BACDA;
+  --Cyan: #00FFF7;
+  --body-bg: #0D192B;
+  --card-bg: #14253D;
+  --line: #2F415B;
+  --white:#FFFFFF;
+  --primary-font: "Outfit";
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: 200;
+  color: var(--Soft-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  background-color: var(--card-bg);
+  padding: 25px;
+  max-width: 375px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.img_equilibrium {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.img-overlay_container {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,255,247, 0.5); 
+  border-radius: 10px;
+  display: flex;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; 
+}
+
+.img-overlay_container:hover .overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+h1:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.value h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--Cyan);
+}
+
+.value img {
+  object-fit: contain;
+}
+
+.eth, .clock{
+  display: flex;
+  gap: 10px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--line);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user img {
+  border: 1px solid var(--white);
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+}
+
+.user span {
+  color: var(--white);
+}
+
+.user span:hover {
+  cursor: pointer;
+  color: var(--Cyan);
+}
+
